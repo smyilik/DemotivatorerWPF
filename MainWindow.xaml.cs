@@ -20,9 +20,16 @@ namespace Demotivatorer
     /// </summary>
     public partial class MainWindow : Window
     {
+        private Image loadImage;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
