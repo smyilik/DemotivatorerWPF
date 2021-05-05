@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Demotivatorer"
         mc:Ignorable="d"
-        Title="Demotivator Editor" Height="750" Width="700">
+        Title="Demotivator Editor" Height="700" Width="710" ResizeMode="NoResize">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#FF444444" Offset="0"/>
@@ -21,34 +24,42 @@
 
         <!-- CONTROL MENU -->
 
-        <Grid HorizontalAlignment="Left" Height="300" Margin="520,15,0,0" VerticalAlignment="Top" Width="162">
+        <Grid HorizontalAlignment="Left" Height="460" Margin="520,15,0,0" VerticalAlignment="Top" Width="170">
 
-            <Border x:Name="MenuBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="162"/>
+            <!-- MENU BORDER -->
+            <Border x:Name="MenuBorder" BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Width="170" Margin="0,0,0,-2" Height="462" VerticalAlignment="Top"/>
 
-            <Button x:Name="ParamsButton" Content="Submit" HorizontalAlignment="Left" Margin="78,64,0,0" VerticalAlignment="Top" Width="74"/>
-            <TextBox x:Name="ParamsWidth" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" Text="500" VerticalAlignment="Top" Width="142" TextChanged="TextBox_TextChanged"/>
-            <TextBox x:Name="ParamsHeight" HorizontalAlignment="Left" Height="22" Margin="10,37,0,0" TextWrapping="Wrap" Text="600" VerticalAlignment="Top" Width="142"/>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="91" VerticalAlignment="Top" Width="162"/>
+            <!-- LOADED IMAGE PARAMETERS -->
+            <Button x:Name="ParamsButton" Content="Submit" HorizontalAlignment="Left" Margin="82,64,0,0" VerticalAlignment="Top" Width="78"/>
+            <TextBox x:Name="ParamsWidth" HorizontalAlignment="Left" Height="22" Margin="10,10,0,0" TextWrapping="Wrap" Text="500" VerticalAlignment="Top" Width="150" TextChanged="TextBox_TextChanged"/>
+            <TextBox x:Name="ParamsHeight" HorizontalAlignment="Left" Height="22" Margin="10,37,0,0" TextWrapping="Wrap" Text="600" VerticalAlignment="Top" Width="150"/>
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="5" VerticalAlignment="Top" Width="170" Margin="0,86,0,0"/>
 
+            <!-- ADD TEXT CONTROLS -->
+            <Button x:Name="TextButton" Content="Add text" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="150" Click="AddText"/>
+            <Border BorderBrush="Black" BorderThickness="1" Height="190" VerticalAlignment="Top" Margin="0,131,0,0"/>
+            <TextBox x:Name="TextTextbox" HorizontalAlignment="Left" Height="190" Margin="10,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
 
-            <Button Content="Add text" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="142"/>
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="62" VerticalAlignment="Top" Width="162" Margin="0,90,0,0">
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="9,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="142"/>
+            <!-- DELETE TEXT CONTROLS -->
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="33" VerticalAlignment="Top" Width="170" Margin="0,320,0,0">
+                <Button x:Name="DeleteButton"  Content="Delete last text" Margin="9,5,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="150"/>
             </Border>
 
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="32" VerticalAlignment="Top" Width="162" Margin="0,151,0,0">
-                <Button Content="Delete last text" HorizontalAlignment="Left" Margin="9,5,0,0" VerticalAlignment="Top" Width="142"/>
-            </Border>
+            <!-- LOADED IMAGE PARAMETERS -->
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="170" Margin="0,352,0,0"/>
+            <TextBox TextWrapping="Wrap" Text="TextBox" Margin="10,0,10,81" Height="20" VerticalAlignment="Bottom"/>
+            <Button x:Name="UploadButton" Content="Upload image" Margin="10,384,10,51" RenderTransformOrigin="0.5,0.5">
+            </Button>
 
-            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="63" VerticalAlignment="Top" Width="162" Margin="0,182,0,0">
-                <Button Content="Upload image" Margin="9,37,9,5"/>
-            </Border>
+            <!-- SHAKAL CHECKBOX -->
+            <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="22" VerticalAlignment="Top" Width="170" Margin="0,414,0,0"/>
+            <CheckBox x:Name="ShakalButton" Content="Shakal quality" HorizontalAlignment="Left" Margin="35,418,0,-133" VerticalAlignment="Top" Width="94" Checked="ShakalButton_Checked"/>
 
-            <CheckBox Content="Shakal quality" HorizontalAlignment="Left" Margin="10,250,0,0" VerticalAlignment="Top" Width="142"/>
-            <Button Content="Apply" HorizontalAlignment="Left" Margin="41,270,0,0" VerticalAlignment="Top" Width="74"/>
-            
-            
-            <Button Content="Download" HorizontalAlignment="Left" Margin="0,310,0,-54" VerticalAlignment="Top" Width="162" Height="44"/>
+            <!-- APPLY CHANGES BUTTON -->
+            <Button x:Name="ApplyButton" Content="Apply" HorizontalAlignment="Left" Margin="45,438,0,-158" VerticalAlignment="Top" Width="74"/>
+
+            <!-- DOWNLOAD IMAGE BUTTON -->
+            <Button x:Name="DownloadButton" Content="Download" HorizontalAlignment="Left" Margin="5,467,0,-51" VerticalAlignment="Top" Width="162" Height="44"/>
 
 
         </Grid>
