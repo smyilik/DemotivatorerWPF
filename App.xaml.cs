@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 //nice library
+//This too?
 namespace Demotivatorer
 {
     /// <summary>
