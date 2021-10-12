@@ -11,6 +11,7 @@ namespace Demotivatorer
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>
+    //goGU
     public partial class App : Application
     {
     }
