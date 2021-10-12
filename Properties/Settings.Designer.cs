@@ -7,7 +7,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-
+//What's that?
 
 namespace Demotivatorer.Properties
 {
