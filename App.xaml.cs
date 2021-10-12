@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -11,7 +11,7 @@ namespace Demotivatorer
     /// <summary>
     /// Логика взаимодействия для App.xaml
     /// </summary>
-    //goGa
+    //goGU
     public partial class App : Application
     {
     }
